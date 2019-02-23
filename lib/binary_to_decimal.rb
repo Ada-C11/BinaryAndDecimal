@@ -7,14 +7,9 @@ require "pry"
 # the algorithm you devised in class.
 def binary_to_decimal(binary_array)
   binary_array_length = binary_array.length
-  sum = 0
+  decimal = 0
   binary_array_length.times do |i|
-    index = (binary_array_length - 1) - i
-    if binary_array[index] == 1
-      sum += 2 ** i
-    end
+    decimal += binary_array[binary_array_length - 1 - i] * 2 ** i
   end
-  return sum
+  return decimal
 end
-
-p binary_to_decimal([1, 0, 1])

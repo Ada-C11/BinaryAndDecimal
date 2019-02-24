@@ -5,23 +5,11 @@
 # Calculate  and return the decimal value for this binary number using
 # the algorithm you devised in class.
 
-# Solution using **
 def binary_to_decimal(binary_array)
-  result = 0
-  binary_array.each_index { |i|
-    result += binary_array[i] * 2 ** (binary_array.length - 1 - i)
+  answer = 0
+  binary_array.each { |bit|
+      answer *= 2
+      answer += bit
   }
-  return result
+  return answer
 end
-
-# Solution not using **
-# def binary_to_decimal(binary_array)
-#   answer = 0
-#   power = 1
-#   binary_array.reverse_each { |bit|
-#       temp = bit * power
-#       power *= 2
-#       answer += temp
-#   }
-#   return answer
-# end

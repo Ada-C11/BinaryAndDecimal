@@ -5,13 +5,16 @@
 # Calculate  and return the decimal value for this binary number using
 # the algorithm you devised in class.
 def binary_to_decimal(binary_array)
-  base = 0
+  base = binary_array.length - 1
   decimal = 0
-  binary_array.reverse.each do |number|
+  binary_array.each do |number|
     if number % 2 != 0
       decimal += 2**(base)
     end
-    base += 1
+    base -= 1
   end
   return decimal
 end
+
+
+

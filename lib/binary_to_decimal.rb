@@ -4,6 +4,10 @@
 # The least significant bit is at index 7.
 # Calculate  and return the decimal value for this binary number using
 # the algorithm you devised in class.
-def binary_to_decimal(binary_array)
-  raise NotImplementedError
+def binary_to_decimal(bin_arr)
+  decimal = 0
+  8.times do |index|
+    decimal += bin_arr[index]*2**(7-index)
+  end
+  return decimal
 end

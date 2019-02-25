@@ -5,5 +5,13 @@
 # Calculate  and return the decimal value for this binary number using
 # the algorithm you devised in class.
 def binary_to_decimal(binary_array)
-  raise NotImplementedError
+  exponent = 0
+  decimal = 0
+  i = binary_array.length - 1
+  while i >= 0
+    decimal += binary_array[i] * 2 ** exponent
+    i -= 1
+    exponent += 1
+  end
+  return decimal
 end

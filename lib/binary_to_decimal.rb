@@ -5,5 +5,17 @@
 # Calculate  and return the decimal value for this binary number using
 # the algorithm you devised in class.
 def binary_to_decimal(binary_array)
-  raise NotImplementedError
+  rev_binary_arr = binary_array.reverse
+  decimal_number = 0
+  i = 0
+
+  while i <= binary_array.length
+    digit = rev_binary_arr[i]
+    if digit == 1
+      decimal_number += (2 ** i)
+    end
+    i += 1
+  end
+
+  return decimal_number
 end

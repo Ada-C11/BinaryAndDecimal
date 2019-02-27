@@ -7,23 +7,23 @@
 
 # array = [1, 0, 0, 1, 1, 0, 0, 1]
 def binary_to_decimal(binary_array)
-  multiplier = 128
+  multiplier = 1
   # raise NotImplementedError
   converted_number = 0
-  converted_number = binary_array[0] * multiplier
-  multiplier /= 2
-  converted_number += binary_array[1] * multiplier
-  multiplier /= 2
-  converted_number += binary_array[2] * multiplier
-  multiplier /= 2
-  converted_number += binary_array[3] * multiplier
-  multiplier /= 2
-  converted_number += binary_array[4] * multiplier
-  multiplier /= 2
-  converted_number += binary_array[5] * multiplier
-  multiplier /= 2
+  converted_number = binary_array[7] * multiplier
+  multiplier *= 2
   converted_number += binary_array[6] * multiplier
-  multiplier /= 2
-  converted_number += binary_array[7] * multiplier
+  multiplier *= 2
+  converted_number += binary_array[5] * multiplier
+  multiplier *= 2
+  converted_number += binary_array[4] * multiplier
+  multiplier *= 2
+  converted_number += binary_array[3] * multiplier
+  multiplier *= 2
+  converted_number += binary_array[2] * multiplier
+  multiplier *= 2
+  converted_number += binary_array[1] * multiplier
+  multiplier *= 2
+  converted_number += binary_array[0] * multiplier
   return converted_number
 end

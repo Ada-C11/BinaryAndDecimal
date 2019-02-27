@@ -5,13 +5,12 @@
 # Calculate  and return the decimal value for this binary number using
 # the algorithm you devised in class.
 
-# array = [1, 0, 0, 1, 1, 0, 0, 1]
+array = [1, 0, 0, 1, 1, 0, 0, 1]
+
 def binary_to_decimal(binary_array)
   multiplier = 1
   converted_number = 0
-  converted_number = binary_array[binary_array.length] * multiplier
-  multiplier *= 2
-  converted_number += binary_array[binary_array.length - 1] * multiplier
+  converted_number = binary_array[binary_array.length - 1] * multiplier
   multiplier *= 2
   converted_number += binary_array[binary_array.length - 2] * multiplier
   multiplier *= 2
@@ -24,5 +23,7 @@ def binary_to_decimal(binary_array)
   converted_number += binary_array[binary_array.length - 6] * multiplier
   multiplier *= 2
   converted_number += binary_array[binary_array.length - 7] * multiplier
+  multiplier *= 2
+  converted_number += binary_array[binary_array.length - 8] * multiplier
   return converted_number
 end

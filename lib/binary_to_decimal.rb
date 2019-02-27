@@ -5,8 +5,6 @@
 # Calculate  and return the decimal value for this binary number using
 # the algorithm you devised in class.
 
-array = [1, 0, 0, 1, 1, 0, 0, 1]
-
 def binary_to_decimal(binary_array)
   multiplier = 1
   converted_number = 0

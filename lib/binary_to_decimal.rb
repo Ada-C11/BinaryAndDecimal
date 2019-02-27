@@ -32,6 +32,4 @@ def binary_to_decimal(binary_array)
   end
 
   return binary_calculation
-
-  raise NotImplementedError
 end

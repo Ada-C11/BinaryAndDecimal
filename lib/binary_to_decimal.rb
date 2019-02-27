@@ -8,22 +8,21 @@
 # array = [1, 0, 0, 1, 1, 0, 0, 1]
 def binary_to_decimal(binary_array)
   multiplier = 1
-  # raise NotImplementedError
   converted_number = 0
-  converted_number = binary_array[7] * multiplier
+  converted_number = binary_array[binary_array.length] * multiplier
   multiplier *= 2
-  converted_number += binary_array[6] * multiplier
+  converted_number += binary_array[binary_array.length - 1] * multiplier
   multiplier *= 2
-  converted_number += binary_array[5] * multiplier
+  converted_number += binary_array[binary_array.length - 2] * multiplier
   multiplier *= 2
-  converted_number += binary_array[4] * multiplier
+  converted_number += binary_array[binary_array.length - 3] * multiplier
   multiplier *= 2
-  converted_number += binary_array[3] * multiplier
+  converted_number += binary_array[binary_array.length - 4] * multiplier
   multiplier *= 2
-  converted_number += binary_array[2] * multiplier
+  converted_number += binary_array[binary_array.length - 5] * multiplier
   multiplier *= 2
-  converted_number += binary_array[1] * multiplier
+  converted_number += binary_array[binary_array.length - 6] * multiplier
   multiplier *= 2
-  converted_number += binary_array[0] * multiplier
+  converted_number += binary_array[binary_array.length - 7] * multiplier
   return converted_number
 end

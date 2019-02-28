@@ -4,6 +4,17 @@
 # The least significant bit is at index 7.
 # Calculate  and return the decimal value for this binary number using
 # the algorithm you devised in class.
+
 def binary_to_decimal(binary_array)
-  raise NotImplementedError
+  i = 0
+  decimal_values = [128, 64, 32, 16, 8, 4, 2, 1]
+  decimal_array = []
+
+  8.times do
+    if binary_array[i] == 1
+      decimal_array << decimal_values[i]
+    end
+    i += 1
+  end
+  return decimal_array.sum
 end

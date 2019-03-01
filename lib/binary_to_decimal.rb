@@ -5,12 +5,11 @@
 # Calculate  and return the decimal value for this binary number using
 # the algorithm you devised in class.
 def binary_to_decimal(binary_array)
-  expected_decimal = 0
-  n = binary_array.length - 1
-  binary_array.each_with_index do |item, index|
-    dec_digit = item * 2 ** n
-    expected_decimal += dec_digit
-    n -= 1
+  decimal_number = 0
+  index = -1
+  binary_array.length.times do |i|
+    decimal_number += binary_array[index] * 2 ** i
+    index -= 1
   end
-  return expected_decimal
+  return decimal_number
 end

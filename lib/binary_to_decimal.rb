@@ -8,20 +8,12 @@
 def binary_to_decimal(binary_array)
   multiplier = 1
   converted_number = 0
-  converted_number = binary_array[binary_array.length - 1] * multiplier
-  multiplier *= 2
-  converted_number += binary_array[binary_array.length - 2] * multiplier
-  multiplier *= 2
-  converted_number += binary_array[binary_array.length - 3] * multiplier
-  multiplier *= 2
-  converted_number += binary_array[binary_array.length - 4] * multiplier
-  multiplier *= 2
-  converted_number += binary_array[binary_array.length - 5] * multiplier
-  multiplier *= 2
-  converted_number += binary_array[binary_array.length - 6] * multiplier
-  multiplier *= 2
-  converted_number += binary_array[binary_array.length - 7] * multiplier
-  multiplier *= 2
-  converted_number += binary_array[binary_array.length - 8] * multiplier
+  i = 1
+  binary_array.length.times do |number|
+    converted_number += binary_array[binary_array.length - i] * multiplier
+    i += 1
+    multiplier *= 2
+  end
   return converted_number
 end
+

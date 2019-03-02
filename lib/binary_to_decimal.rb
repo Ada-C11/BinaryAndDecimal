@@ -6,9 +6,9 @@
 # the algorithm you devised in class.
 def binary_to_decimal(binary_array)
   total = 0
-  place_value = 128
+  place_value = 2 ** (binary_array.length - 1)
   i = 0
-  while i < 8
+  while i < binary_array.length
     total += place_value if (binary_array[i] == 1)
     place_value /= 2
     i += 1

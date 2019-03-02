@@ -8,7 +8,7 @@ def binary_to_decimal(binary_array)
   index = -1
   exponent = 0
   result = 0
-  binary_array.each do
+  binary_array.length.times do
     decimal = binary_array[index] * 2 ** exponent
     result = result + decimal
     index -= 1

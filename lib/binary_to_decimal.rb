@@ -6,7 +6,7 @@
 # the algorithm you devised in class.
 def binary_to_decimal(binary_array)
   decimal = 0
-  8.times do |i|
+  for i in 0..7
     decimal += binary_array[i] * 2 ** (7 - i)
   end
   return decimal

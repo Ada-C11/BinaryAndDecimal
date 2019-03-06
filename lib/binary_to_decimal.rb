@@ -1,11 +1,5 @@
-require "pry"
-
-# A method named `binary_to_decimal` that receives as input an array of size 8.
-# The array is randomly filled with 0’s and 1’s.
-# The most significant bit is at index 0.
-# The least significant bit is at index 7.
-# Calculate  and return the decimal value for this binary number using
-# the algorithm you devised in class.
+# CS Fun
+# Binary and Decimal
 
 # randomly generated binary array
 def generate_binary
@@ -18,10 +12,14 @@ def generate_binary
   return binary_num
 end
 
-def binary_to_decimal(binary_array)
-  unless binary_array.length == 8
-    raise NotImplementedError, "You must provide an array of length 8."
+# convert binary array to single decimal value
+def binary_to_decimal(array)
+  # Raise error if array != 8
+  unless array.length == 8
+    raise ArgumentError, "You must provide an array of length 8."
   end
+
+  puts "#{array}"
 
   binary_exponent = 0
   sum = 0
@@ -29,7 +27,7 @@ def binary_to_decimal(binary_array)
 
   8.times do
     # check value
-    if binary_array[index] == 1
+    if array[index] == 1
       sum += (1 * (2 ** binary_exponent))
     end
     # decrement to index in reverse

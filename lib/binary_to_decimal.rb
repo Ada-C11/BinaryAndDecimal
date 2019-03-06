@@ -10,5 +10,4 @@ def binary_to_decimal(binary_array)
     end
     puts "#{binary_array} in base 10 is: #{base_10}"
     return base_10
-  raise NotImplementedError
 end

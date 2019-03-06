@@ -1,6 +1,5 @@
 # CS Fun
 # Binary and Decimal
-require "pry"
 
 # randomly generated binary array
 def generate_binary
